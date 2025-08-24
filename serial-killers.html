@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Famous Serial Killers - Serial Killer Books</title>
+    <link rel="stylesheet" href="styles.css" />
+    <meta name="description" content="Explore famous serial killers: their crimes, methods of operation, and capture details." />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container inner">
+        <div class="brand">
+          <span class="mark"></span>
+          <span class="brand-title">Serial Killer Books</span>
+        </div>
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="authors.html">Authors</a>
+          <a href="serial-killers.html" class="active">Serial Killers</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <h1>Famous <span class="headline-accent">Serial Killers</span></h1>
+          <p class="muted">
+            Historical cases that shaped our understanding of serial violence and inspired countless works of fiction and true crime.
+          </p>
+          <div class="actions">
+            <a class="btn primary" href="#killers-list">View All Cases</a>
+            <a class="btn" href="index.html">Back to Home</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="killers-list">
+        <div class="container">
+          <div class="killers-grid" id="killers-container">
+            <!-- Killers will be populated by JavaScript -->
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div>© <span id="year"></span> Serial Killer Books.</div>
+      </div>
+    </footer>
+
+    <script src="app.js"></script>
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+      window.SerialSite.mountHeader('serial-killers');
+      window.SerialSite.renderSerialKillers('#killers-container');
+    </script>
+  </body>
+</html>

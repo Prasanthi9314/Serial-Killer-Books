@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Author • Serial Killer Books</title>
+    <link rel="stylesheet" href="styles.css" />
+    <meta name="description" content="View an author's serial killer books in order." />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container inner">
+        <div class="brand">
+          <span class="mark"></span>
+          <span class="brand-title">Serial Killer Books</span>
+        </div>
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="authors.html">Authors</a>
+          <a href="serial-killers.html">Serial Killers</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <h1>Author</h1>
+          <p class="muted">Books listed chronologically.</p>
+        </div>
+      </section>
+
+      <section>
+        <div class="container" id="author-detail"></div>
+      </section>
+      <section>
+        <div class="container">
+          <a class="btn" href="authors.html">← Back to Authors</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div>© <span id="year"></span> Serial Killer Books.</div>
+      </div>
+    </footer>
+
+    <script src="app.js"></script>
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+      window.SerialSite.mountHeader();
+      window.SerialSite.renderAuthorDetail('#author-detail');
+    </script>
+  </body>
+  </html>
+
+
