@@ -30,4 +30,5 @@ This project is a simple static website for exploring books by and about serial 
 - This project is static and does not require a server or build process.
 
 ---
-Created by [Your Name].
+Created by Prasanthi.
+
